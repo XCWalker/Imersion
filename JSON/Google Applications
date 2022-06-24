@@ -1,0 +1,92 @@
+[
+  {
+    "title": "Google",
+    "svg_url": "https://uploads-ssl.webflow.com/60bcfa79f82df9d620d6820a/60be73baf50828200566033c_Google.svg",
+    "redirect_url": "https://www.google.com"
+  },
+  {
+    "title": "Google Docs",
+    "svg_url": "https://uploads-ssl.webflow.com/60bcfa79f82df9d620d6820a/60be73bbd568b22df7cc0727_Google%20Docs.svg",
+    "redirect_url": "https://docs.google.com"
+  },
+  {
+    "title": "Google Slides",
+    "svg_url": "https://uploads-ssl.webflow.com/60bcfa79f82df9d620d6820a/60be73bb896bb4723352075f_Google%20Slides.svg",
+    "redirect_url": "https://slides.google.com"
+  },
+  {
+    "title": "Google Sheets",
+    "svg_url": "https://uploads-ssl.webflow.com/60bcfa79f82df9d620d6820a/60be73bb896bb4723352075f_Google%20Slides.svg",
+    "redirect_url": "https://sheets.google.com"
+  },
+  {
+    "title": "Google Keep",
+    "svg_url": "https://uploads-ssl.webflow.com/60bcfa79f82df9d620d6820a/60be73ba2ed9463d53445b02_Google%20Keep.svg",
+    "redirect_url": "https://keep.google.com"
+  },
+  {
+    "title": "Google Calendar",
+    "svg_url": "https://uploads-ssl.webflow.com/60bcfa79f82df9d620d6820a/60be73babe8b0c07964092ac_Google%20Calendar.svg",
+    "redirect_url": "https://calendar.google.com"
+  },
+  {
+    "title": "Google Chat",
+    "svg_url": "https://uploads-ssl.webflow.com/60bcfa79f82df9d620d6820a/60be73bae045c65ebe8a4654_Google%20Chat.svg",
+    "redirect_url": "https://chat.google.com"
+  },
+  {
+    "title": "Google Meet",
+    "svg_url": "https://uploads-ssl.webflow.com/60bcfa79f82df9d620d6820a/60be73ba120bb264b65c9db6_Google%20Meet.svg",
+    "redirect_url": "https://meet.google.com"
+  },
+  {
+    "title": "Google Mail",
+    "svg_url": "https://uploads-ssl.webflow.com/60bcfa79f82df9d620d6820a/60be73ba120bb20ffb5c9db5_Google%20Mail.svg",
+    "redirect_url": "https://mail.google.com"
+  },
+  {
+    "title": "Google Drive",
+    "svg_url": "https://uploads-ssl.webflow.com/60bcfa79f82df9d620d6820a/60be73baba41f761ada57fdc_Google%20Drive.svg",
+    "redirect_url": "https://drive.google.com"
+  },
+  {
+    "title": "Google Translate",
+    "svg_url": "https://uploads-ssl.webflow.com/60bcfa79f82df9d620d6820a/60be79a9bf5abc95f251db5b_Google%20Translate.svg",
+    "redirect_url": "https://translate.google.co.uk"
+  },
+  {
+    "title": "Google Forms",
+    "svg_url": "https://uploads-ssl.webflow.com/60bcfa79f82df9d620d6820a/60be73ba786070fe7987d703_Google%20Forms.svg",
+    "redirect_url": "https://forms.google.com"
+  },
+  {
+    "title": "Google Sites",
+    "svg_url": "https://uploads-ssl.webflow.com/60bcfa79f82df9d620d6820a/60be73baa0378c28d5e404ec_Google%20Sites.svg",
+    "redirect_url": "https://sites.google.com"
+  },
+  {
+    "title": "YouTube",
+    "svg_url": "https://uploads-ssl.webflow.com/60bcfa79f82df9d620d6820a/62b57969393fc511ea381bf6_YouTube.svg",
+    "redirect_url": "https://www.youtube.com"
+  },
+  {
+    "title": "YouTube Music",
+    "svg_url": "https://uploads-ssl.webflow.com/60bcfa79f82df9d620d6820a/62b579698668ac54e53e38a9_Youtube%20Music.svg",
+    "redirect_url": "https://music.youtube.com"
+  },
+  {
+    "title": "Google Maps",
+    "svg_url": "https://uploads-ssl.webflow.com/60bcfa79f82df9d620d6820a/62b579667691c3cebbf75edc_Google%20Maps.svg",
+    "redirect_url": "https://maps.google.com"
+  },
+  {
+    "title": "Google Photos",
+    "svg_url": "https://uploads-ssl.webflow.com/60bcfa79f82df9d620d6820a/62b57967ffdd3a6821c95cf8_Google%20Photos.svg",
+    "redirect_url": "https://photos.google.com"
+  },
+  {
+    "title": "Google News",
+    "svg_url": "https://uploads-ssl.webflow.com/60bcfa79f82df9d620d6820a/62b579658165e983e1f256dd_Google%20News.svg",
+    "redirect_url": "https://news.google.com"
+  }
+]
