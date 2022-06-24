@@ -1,0 +1,37 @@
+#\32 bf035f2-41c7-44a9-8b12-c57b66f9ac12 .window-content {
+    /* flex */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    /* text-styling */
+    color: var(--primary-text-color);
+    fill: currentColor;
+    text-align: center;
+}
+
+#\32 bf035f2-41c7-44a9-8b12-c57b66f9ac12 h1 {
+    /* text styling */
+    font-size: 25px;
+}
+
+#\32 bf035f2-41c7-44a9-8b12-c57b66f9ac12 h2 {
+    /* text styling */
+    font-size: 20px;
+}
+
+#\32 bf035f2-41c7-44a9-8b12-c57b66f9ac12 a {
+    /* text styling */
+    font-size: 18px;
+    text-decoration: none;
+    color: inherit;
+}
+
+#\32 bf035f2-41c7-44a9-8b12-c57b66f9ac12 p {
+    /* text styling */
+    font-size: 14px;
+
+    /* sizing */
+    max-width: 468px;
+}

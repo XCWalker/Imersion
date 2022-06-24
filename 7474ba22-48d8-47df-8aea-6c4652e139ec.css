@@ -1,0 +1,69 @@
+#\37 474ba22-48d8-47df-8aea-6c4652e139ec .window-content {
+    /* flex */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#\37 474ba22-48d8-47df-8aea-6c4652e139ec .window-content-pad {
+    /* position */
+    position: relative;
+
+}
+
+#\37 474ba22-48d8-47df-8aea-6c4652e139ec h1 {
+    font-size: 25px;
+}
+
+#\37 474ba22-48d8-47df-8aea-6c4652e139ec h1#\37 474ba22-48d8-47df-8aea-6c4652e139ec-time {
+    font-size: 33px;
+}
+
+#\37 474ba22-48d8-47df-8aea-6c4652e139ec .window-hover-section {
+    /* position */
+    position: absolute;
+    left: var(--window-gap);
+    right: var(--window-gap);
+
+    /* sizing */
+    height: calc(var(--window-header-height) * 3);
+    width: -moz-available;
+    padding: calc(var(--window-gap) * 0.5);
+
+    /* flex */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: var(--window-gap);
+
+    /* styling */
+    background-color: var(--tertiary-color);
+    border-radius: var(--window-radius);
+}
+
+#\37 474ba22-48d8-47df-8aea-6c4652e139ec .window-hover-section.lower {
+    /* position */
+    bottom: var(--window-gap);
+}
+
+#\37 474ba22-48d8-47df-8aea-6c4652e139ec .window-hover-section.upper {
+    /* position */
+    top: var(--window-gap);
+}
+
+#\37 474ba22-48d8-47df-8aea-6c4652e139ec .window-hover-section button {
+    /* sizing */
+    width: 100%;
+
+    /* text styling */
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 1;
+    color: var(--primary-text-color);
+
+    /* styling */
+    background-color: var(--secondary-color);
+    border-radius: var(--window-radius);
+    border: none;
+}
