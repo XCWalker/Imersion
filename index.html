@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Example OS UI | XCWalker</title>
+
+    <!-- Default CSS & JS -->
+    <link rel="stylesheet" defer href="style.css">
+    <script src="cookies.js" async></script>
+    <script src="window.js" async></script>
+    <script src="clock.js" async></script>
+    <script src="notifications.js" async></script>
+    <script src="taskbar.js" async></script>
+    <script src="settings.js" async></script>
+
+    <!-- Window CSS & JS -->
+    <link rel="stylesheet" href="./windows/7474ba22-48d8-47df-8aea-6c4652e139ec.css">
+    <script src="./windows/7474ba22-48d8-47df-8aea-6c4652e139ec.js" async></script>
+    <link rel="stylesheet" href="./windows/2bf035f2-41c7-44a9-8b12-c57b66f9ac12.css">
+    <script src="./windows/2bf035f2-41c7-44a9-8b12-c57b66f9ac12.js" async></script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="taskbar">
+        <div class="taskbar-main-container" id="taskbar-main-left">
+            <div class="taskbar-container" id="taskbar-start">
+                <a class="taskbar-item" onclick="showstartmenu()">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 4875 4875">
+                        <path d="M0 0h2311v2310H0zm2564 0h2311v2310H2564zM0 2564h2311v2311H0zm2564 0h2311v2311H2564" />
+                    </svg>
+                </a>
+            </div>
+            <div class="taskbar-container" id="taskbar-search">
+                <input type="search" name="" id="taskbar-search-input" class="taskbar-item"
+                    placeholder="Type to search">
+                <a class="taskbar-item" onclick="showsearch()">
+                    <svg version="1.1" viewBox="0 0 17.1 17.1" xmlns="http://www.w3.org/2000/svg">
+                        <path d="m-2.9734-2.9784h24v24h-24z" fill="none" />
+                        <path
+                            d="m12.527 11.022h-0.79l-0.28-0.27c1.2-1.4 1.82-3.31 1.48-5.34-0.47-2.78-2.79-5-5.59-5.34-4.23-0.52-7.79 3.04-7.27 7.27 0.34 2.8 2.56 5.12 5.34 5.59 2.03 0.34 3.94-0.28 5.34-1.48l0.27 0.28v0.79l4.25 4.25c0.41 0.41 1.08 0.41 1.49 0s0.41-1.08 0-1.49zm-6 0c-2.49 0-4.5-2.01-4.5-4.5s2.01-4.5 4.5-4.5 4.5 2.01 4.5 4.5-2.01 4.5-4.5 4.5z" />
+                    </svg>
+
+                </a>
+            </div>
+            <div class="taskbar-container" id="taskbar-ava">
+                <a class="taskbar-item" onclick="show('ava')" id="taskbar-item-ava">
+                    <svg version="1.1" viewBox="0 0 135.47 50.611" xmlns="http://www.w3.org/2000/svg">
+                        <g transform="translate(-1.0309e-6 -42.428)">
+                            <g transform="matrix(1.1852 0 0 1.1852 1.0309e-6 -12.543)">
+                                <path
+                                    d="m33.816 46.382 18.423 42.703h9.7606l18.484-42.703h-9.8216l-13.184 30.5-12.987-30.5z"
+                                    stroke-width="1.6946" />
+                                <path transform="matrix(.22324 0 0 .22324 0 46.382)"
+                                    d="m85.26 0-85.26 191.29h45.361l61.467-147.81 32.348 78.088h-46.582l-9.9141 28.359h68.244l17.135 41.363h46.453l-85.529-191.29z"
+                                    stroke-width="7.5907" />
+                                <path transform="matrix(.22324 0 0 .22324 0 46.382)"
+                                    d="m382.75 0-85.258 191.29h45.361l17.201-41.363h68.416l-9.9141-28.359h-46.709l32.473-78.088 61.229 147.81h46.455l-85.533-191.29z"
+                                    stroke-width="7.5907" />
+                            </g>
+                        </g>
+                    </svg>
+                </a>
+            </div>
+        </div>
+        <div class="taskbar-main-container" id="taskbar-main-middle">
+            <div class="taskbar-container" id="taskbar-apps">
+                <a class="taskbar-item">
+                    <img src="" alt="">
+                </a>
+            </div>
+        </div>
+        <div class="taskbar-main-container" id="taskbar-main-right">
+            <div class="taskbar-container" id="taskbar-icons">
+                <a class="taskbar-item">
+                    <img src="" alt="">
+                </a>
+            </div>
+            <div class="taskbar-container" id="taskbar-time">
+                <a class="taskbar-item" onclick="show('7474ba22-48d8-47df-8aea-6c4652e139ec')">
+                    <h4 class="taskbar-clock" id="taskbar-clock-time">00:00:00</h4>
+                    <h4 class="taskbar-clock" id="taskbar-clock-date">0000/00/00</h4>
+                </a>
+            </div>
+            <div class="taskbar-container" id="taskbar-notifications">
+                <a class="taskbar-item" onclick="openNotificationPane()">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="notification-icon" id="notifactions-none"
+                        viewBox="0 0 24 24">
+                        <path fill="none" d="M0 0h24v24H0V0z" />
+                        <path
+                            d="M19.29 17.29L18 16v-5c0-3.07-1.64-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.63 5.36 6 7.92 6 11v5l-1.29 1.29c-.63.63-.19 1.71.7 1.71h13.17c.9 0 1.34-1.08.71-1.71zM16 17H8v-6c0-2.48 1.51-4.5 4-4.5s4 2.02 4 4.5v6zm-4 5c1.1 0 2-.9 2-2h-4c0 1.1.89 2 2 2z" />
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="notification-icon" id="notifactions-present"
+                        viewBox="0 0 24 24">
+                        <path fill="none" d="M0 0h24v24H0V0z" />
+                        <path
+                            d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.89 2 2 2zm6-6v-5c0-3.07-1.64-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.63 5.36 6 7.92 6 11v5l-1.29 1.29c-.63.63-.19 1.71.7 1.71h13.17c.89 0 1.34-1.08.71-1.71L18 16z" />
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="notification-icon" id="notifactions-new"
+                        viewBox="0 0 24 24">
+                        <path fill="none" d="M0 0h24v24H0V0z" />
+                        <path
+                            d="M18 16v-5c0-3.07-1.64-5.64-4.5-6.32V4c0-.83-.68-1.5-1.51-1.5S10.5 3.17 10.5 4v.68C7.63 5.36 6 7.92 6 11v5l-1.3 1.29c-.63.63-.19 1.71.7 1.71h13.17c.89 0 1.34-1.08.71-1.71L18 16zm-6.01 6c1.1 0 2-.9 2-2h-4c0 1.1.89 2 2 2zM6.77 4.73c.42-.38.43-1.03.03-1.43-.38-.38-1-.39-1.39-.02C3.7 4.84 2.52 6.96 2.14 9.34c-.09.61.38 1.16 1 1.16.48 0 .9-.35.98-.83.3-1.94 1.26-3.67 2.65-4.94zM18.6 3.28c-.4-.37-1.02-.36-1.4.02-.4.4-.38 1.04.03 1.42 1.38 1.27 2.35 3 2.65 4.94.07.48.49.83.98.83.61 0 1.09-.55.99-1.16-.38-2.37-1.55-4.48-3.25-6.05z" />
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="notification-icon" id="notifactions-mute"
+                        viewBox="0 0 24 24">
+                        <path fill="none" d="M0 0h24v24H0V0z" />
+                        <path
+                            d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.89 2 2 2zm6-11c0-3.07-1.64-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68c-.24.06-.47.15-.69.23L18 13.1V11zM5.41 3.35L4 4.76l2.81 2.81C6.29 8.57 6 9.73 6 11v5l-1.29 1.29c-.63.63-.19 1.71.7 1.71h12.83l1.74 1.74 1.41-1.41L5.41 3.35z" />
+                    </svg>
+                </a>
+            </div>
+            <div class="taskbar-container" id="taskbar-hide">
+                <a class="taskbar-item"></a>
+            </div>
+        </div>
+    </div>
+    <div class="start">
+        <div class="start-menu" id="start-menu">
+            <div class="start-menu-left">
+                <div class="start-menu-applications-section">
+                    <div class="start-menu-applications" data-applications-container>
+                        <template data-applications-template>
+                            <a class="start-menu-application">
+                                <img src="" alt="" data-applications-svg>
+                                <h3 data-applications-title>Lorem ipsum dolor sit amet</h3>
+                            </a>
+                        </template>
+                    </div>
+                </div>
+                <div class="start-menu-power">
+                    <a class="start-menu-power-option" onclick="window.close();">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path fill="none" d="M0 0h24v24H0V0z" />
+                            <path
+                                d="M12 3c-.55 0-1 .45-1 1v8c0 .55.45 1 1 1s1-.45 1-1V4c0-.55-.45-1-1-1zm5.14 2.86c-.39.39-.38 1-.01 1.39 1.13 1.2 1.83 2.8 1.87 4.57.09 3.83-3.08 7.13-6.91 7.17C8.18 19.05 5 15.9 5 12c0-1.84.71-3.51 1.87-4.76.37-.39.37-1-.01-1.38-.4-.4-1.05-.39-1.43.02C3.98 7.42 3.07 9.47 3 11.74c-.14 4.88 3.83 9.1 8.71 9.25 5.1.16 9.29-3.93 9.29-9 0-2.37-.92-4.51-2.42-6.11-.38-.41-1.04-.42-1.44-.02z" />
+                        </svg>
+                    </a>
+                    <a class="start-menu-power-option" onClick="window.location.reload();">
+                        <svg version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0 0h24v24H0V0z" fill="none" />
+                            <path
+                                d="m12.26 3c-5.09-0.14-9.26 3.95-9.26 9h-1.79c-0.45 0-0.67 0.54-0.35 0.85l2.79 2.79c0.2 0.2 0.51 0.2 0.71 0l2.79-2.79c0.31-0.31 0.09-0.85-0.36-0.85h-1.79c0-3.9 3.18-7.05 7.1-7 3.72 0.05 6.85 3.18 6.9 6.9 0.05 3.91-3.1 7.1-7 7.1-1.25 0-2.42-0.34-3.44-0.91-0.39-0.22-0.87-0.14-1.18 0.18-0.46 0.46-0.37 1.25 0.2 1.57 1.31 0.73 2.81 1.16 4.42 1.16 5.05 0 9.14-4.17 9-9.26-0.13-4.69-4.05-8.61-8.74-8.74z" />
+                        </svg>
+                    </a>
+                    <a class="start-menu-power-option">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <g fill="none">
+                                <path d="M0 0h24v24H0V0z" />
+                                <path d="M0 0h24v24H0V0z" opacity=".87" />
+                            </g>
+                            <path
+                                d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zM9 8V6c0-1.66 1.34-3 3-3s3 1.34 3 3v2H9z" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div class="start-menu-pins">
+                <a href="https://xc-walker.webflow.io" class="start-menu-pin" id="start-menu-pin-xcwalker">
+                    <svg width="279.57" height="63.13" version="1.1" viewBox="0 0 73.969 16.703"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <g transform="translate(152.86 -16.644)">
+                            <path transform="matrix(.26458 0 0 .26458 -237.26 51.943)"
+                                d="m598.58-133.41c-23.635 0-60.166 1.4941-97.859 7.7383h3.6816v5.1602c2.0748-0.49488 4.1426-0.97991 6.1797-1.4375v-3.7228h10.002v1.5938c44.906-9.105 77.996-9.332 77.996-9.332zm-104.18 8.8301c-11.967 2.1492-23.978 4.7942-35.676 8.0391l-3.582 10.809c1.5854-0.58154 3.1697-1.1653 4.75-1.7226l-1.1406-2.1191 0.89063-0.68555 0.12109-0.0918c1e-3 -1e-3 2e-3 -3e-3 4e-3 -4e-3 0.40577-0.31141 0.83333-0.59814 1.2715-0.87109 0.0392-0.0244 0.0739-0.054 0.11328-0.0781 0.18122-0.11076 0.3779-0.20232 0.56446-0.30664 0.31197-0.17461 0.61862-0.3549 0.94531-0.51172 0.5182-0.24839 1.0552-0.47575 1.6094-0.67969 2e-3 -7e-4 4e-3 -1e-3 6e-3 -2e-3 0.024-9e-3 0.0502-0.0147 0.0742-0.0234 0.53184-0.19345 1.0772-0.37052 1.6406-0.52344 2e-3 0 3e-3 -2e-3 4e-3 -2e-3 2.3703-0.67 4.8216-1.0039 7.3379-1.0039 1.0607 0 2.0684 0.0714 3.0352 0.19727 0.50185 0.0632 0.96124 0.18256 1.4375 0.27929 0.36934 0.0763 0.76301 0.12083 1.1172 0.2168 5.2283-1.5702 10.396-3.0193 15.477-4.3496v-6.1562zm-46.934 11.396c-3.3439 1.0644-6.6587 2.1706-9.918 3.3457l3.2051 9.7109c0.907-0.3745 1.814-0.7707 2.7207-1.1367zm-18.842 6.7734c-0.12921 0.0524-0.25758 0.1055-0.38672 0.1582l-4.668 13.742c2.7998-1.3307 5.6039-2.6178 8.4121-3.8633zm-11.939 5.252c-0.8524 0.40803-1.69 0.82989-2.5312 1.248l1.0332 3.1641zm-11.568 6.0488c-3.1837 1.946-6.2674 3.6843-9.3008 5.3047l1.1484 1.0938-0.93164 1.0781c-1.9782 2.3012-4.4195 4.0731-7.2695 5.2773-2.853 1.2055-6.0153 1.7949-9.4355 1.7949-1.2241 0-2.4123-0.10212-3.5801-0.25781-17.619 6.3718-33.814 8.3533-52.068 10.51 32.111 0 55.955 1.3468 84.822-14.592z" />
+                            <path transform="matrix(.26458 0 0 .26458 -237.26 51.943)"
+                                d="m495.9-124.17v41.553h7v-41.553zm16.184 0v41.553h7v-7.8809l5.207-4.9258 10.361 12.807h8.5117l-13.654-17.373 12.479-12.531h-8.4004l-14.504 13.412v-25.061zm-132.7 1.793c-3.0239 0-5.8052 0.50374-8.3438 1.5117-2.5386 0.97064-4.7601 2.3699-6.6641 4.1992-1.904 1.792-3.3785 3.9208-4.4238 6.3848-1.0453 2.4639-1.5684 5.1525-1.5684 8.0645 0 2.9119 0.52304 5.5986 1.5684 8.0625 1.0453 2.4639 2.5006 4.6102 4.3672 6.4395 1.904 1.792 4.1255 3.1932 6.6641 4.2012 2.5759 0.97064 5.3571 1.4551 8.3438 1.4551 3.2479 0 6.197-0.55972 8.8476-1.6797 2.6506-1.12 4.8914-2.7431 6.7207-4.8711l-4.7031-4.4805c-1.4186 1.568-3.0051 2.7434-4.7598 3.5273-1.7546 0.74665-3.6596 1.1211-5.7129 1.1211-2.0533-1e-6 -3.939-0.33583-5.6562-1.0078-1.68-0.67198-3.1545-1.6255-4.4238-2.8574-1.232-1.232-2.2028-2.6872-2.9121-4.3672-0.67198-1.68-1.0078-3.527-1.0078-5.543 0-2.016 0.33584-3.865 1.0078-5.5449 0.70931-1.68 1.6801-3.1352 2.9121-4.3672 1.2693-1.232 2.7439-2.1835 4.4238-2.8555 1.7173-0.67198 3.603-1.0098 5.6562-1.0098 2.0533 0 3.9583 0.39376 5.7129 1.1777 1.7546 0.74665 3.3411 1.8854 4.7598 3.416l4.7031-4.4258c-1.8293-2.1653-4.0701-3.7884-6.7207-4.8711-2.6506-1.12-5.5804-1.6797-8.791-1.6797zm-59.582 0.56055 13.754 19.188-14.539 20.012h8.2888l10.51-14.92 10.658 14.92h8.3984l-14.723-20.275 13.715-18.924h-7.8945l-9.9023 13.92-10.033-13.92zm78.049 0 12.992 39.199h7.7832l9.8477-28.986 9.6953 28.986h7.7285l12.992-39.199h-6.9434l-10.039 29.973-9.8965-29.973h-6.7207l-10.127 29.818-9.752-29.818zm75.486 8.959c-2.3893 0-4.7034 0.31652-6.9434 0.95117-2.2026 0.59732-4.1076 1.5122-5.7129 2.7441l2.7441 5.0957c1.12-0.93331 2.4826-1.6609 4.0879-2.1836 1.6426-0.52265 3.3044-0.7832 4.9844-0.7832 2.5013 0 4.3676 0.57902 5.5996 1.7363 1.232 1.12 1.8476 2.7065 1.8476 4.7598v0.44727h-7.7266c-3.0239 0-5.452 0.3918-7.2812 1.1758-1.8293 0.78398-3.1533 1.8474-3.9746 3.1914-0.78397 1.344-1.1758 2.8571-1.1758 4.5371 0 1.7173 0.44778 3.2671 1.3438 4.6484 0.93332 1.344 2.24 2.4074 3.9199 3.1914 1.68 0.74665 3.639 1.1191 5.8789 1.1191 2.6506 0 4.8354-0.48444 6.5527-1.4551 1.2086-0.66857 2.1605-1.5239 2.8555-2.5645v3.6289h6.6074v-17.529c0-4.3306-1.1947-7.5209-3.584-9.5742-2.3519-2.0906-5.6929-3.1367-10.023-3.1367zm86.104 0c-2.9866 0-5.6559 0.65431-8.0078 1.9609-2.3146 1.3066-4.1443 3.117-5.4883 5.4316-1.3066 2.2773-1.959 4.9079-1.959 7.8945 0 2.9493 0.67166 5.5819 2.0156 7.8965 1.3813 2.3146 3.3036 4.1443 5.7676 5.4883 2.5013 1.3066 5.4138 1.959 8.7363 1.959 2.6133 0 4.9274-0.40916 6.9434-1.2305 2.0533-0.85864 3.7517-2.0727 5.0957-3.6406l-3.752-4.3125c-1.0453 1.12-2.24 1.9422-3.584 2.4648-1.344 0.52265-2.8552 0.7832-4.5352 0.7832-1.9413 0-3.659-0.37249-5.1524-1.1191-1.4933-0.74665-2.6494-1.8121-3.4707-3.1934-0.51753-0.87039-0.87108-1.822-1.0625-2.8555h23.461c0.0373-0.33599 0.0566-0.69113 0.0566-1.0645 0.0373-0.37332 0.0547-0.70915 0.0547-1.0078 0-3.1359-0.65235-5.8612-1.959-8.1758-1.3066-2.3146-3.0977-4.1057-5.375-5.375-2.2773-1.2693-4.8732-1.9043-7.7852-1.9043zm39.143 0c-2.8746 0-5.2814 0.52305-7.2226 1.5684-1.4186 0.77886-2.557 1.8268-3.416 3.1445v-4.377h-6.6641v29.904h7v-14.504c0-3.0613 0.7836-5.358 2.3516-6.8887 1.568-1.568 3.6775-2.3516 6.3281-2.3516 0.26132 0 0.52187 0.0193 0.7832 0.0566 0.26133 0 0.54119 0.0367 0.83984 0.11132zm-39.143 5.5996c1.68 0 3.1545 0.37445 4.4238 1.1211 1.3066 0.74664 2.3334 1.7734 3.0801 3.0801 0.52789 0.92379 0.86009 1.9491 0.9961 3.0781h-17.018c0.15323-1.1214 0.47359-2.1293 0.95898-3.0234 0.74665-1.344 1.7541-2.3881 3.0234-3.1348 1.3066-0.74665 2.8179-1.1211 4.5352-1.1211zm-86.719 11.816h7.2226v3.4707c-0.59731 1.5306-1.5855 2.6887-2.9668 3.4727-1.344 0.78398-2.8745 1.1758-4.5918 1.1758-1.792 0-3.1932-0.37249-4.2012-1.1191-1.008-0.74665-1.5117-1.7541-1.5117-3.0234 0-1.12 0.41113-2.0541 1.2324-2.8008 0.82132-0.78398 2.4271-1.1758 4.8164-1.1758z"
+                                stroke-width="2.3333" />
+                        </g>
+                    </svg>
+                </a>
+                <a class="start-menu-pin" onclick="show('2bf035f2-41c7-44a9-8b12-c57b66f9ac12')">About</a>
+                <a class="start-menu-pin" onclick="show('7474ba22-48d8-47df-8aea-6c4652e139ec')">Clock</a>
+                <a class="start-menu-pin"></a>
+                <a class="start-menu-pin"></a>
+                <a class="start-menu-pin"></a>
+                <a class="start-menu-pin"></a>
+                <a class="start-menu-pin"></a>
+                <a class="start-menu-pin"></a>
+                <a class="start-menu-pin"></a>
+                <a class="start-menu-pin"></a>
+                <a class="start-menu-pin"></a>
+                <a class="start-menu-pin"></a>
+                <a class="start-menu-pin"></a>
+                <a class="start-menu-pin"></a>
+                <a class="start-menu-pin"></a>
+                <a class="start-menu-pin"></a>
+                <a class="start-menu-pin"></a>
+            </div>
+        </div>
+        <div class="start-menu-close" id="start-menu-close" onclick="showstartmenu()"></div>
+    </div>
+    <div class="ava hidden" id="ava">
+        <div class="ava-window">
+            <svg version="1.1" viewBox="0 0 135.47 50.611" xmlns="http://www.w3.org/2000/svg">
+                <g transform="translate(-1.0309e-6 -42.428)">
+                    <g transform="matrix(1.1852 0 0 1.1852 1.0309e-6 -12.543)">
+                        <path d="m33.816 46.382 18.423 42.703h9.7606l18.484-42.703h-9.8216l-13.184 30.5-12.987-30.5z"
+                            stroke-width="1.6946" />
+                        <path transform="matrix(.22324 0 0 .22324 0 46.382)"
+                            d="m85.26 0-85.26 191.29h45.361l61.467-147.81 32.348 78.088h-46.582l-9.9141 28.359h68.244l17.135 41.363h46.453l-85.529-191.29z"
+                            stroke-width="7.5907" />
+                        <path transform="matrix(.22324 0 0 .22324 0 46.382)"
+                            d="m382.75 0-85.258 191.29h45.361l17.201-41.363h68.416l-9.9141-28.359h-46.709l32.473-78.088 61.229 147.81h46.455l-85.533-191.29z"
+                            stroke-width="7.5907" />
+                    </g>
+                </g>
+            </svg>
+        </div>
+    </div>
+    <div id="notification-popup-container" data-notification-popup-container>
+        <template id="notification-popup" data-notification-popup-template>
+            <a class="notification-popup-content-pad">
+                <div class="notification-popup-content">
+                    <div class="notification-popup-image-container" data-notification-popup-image-container>
+                        <img class="notification-popup-image" src="" alt="" data-notification-popup-image>
+                    </div>
+                    <div class="notification-popup-content-lower">
+                        <div class="notification-popup-content-left" data-notification-popup-icon-container>
+                            <img src="" alt="" data-notification-popup-icon>
+                        </div>
+                        <div class="notification-popup-content-right">
+                            <h1 data-notification-popup-title>Title</h1>
+                            <h2 data-notification-popup-date>Date</h2>
+                            <p data-notification-popup-description>Description</p>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </template>
+    </div>
+    <div id="notification-panel-container">
+        <div class="notification-panel" id="notification-panel">
+            <div class="notification-panel-content-pad">
+                <div class="notification-panel-content" data-notification-panel-container>
+                    <template id="notification-panel-item" data-notification-panel-item-template>
+                        <a class="notification-panel-item-content-pad">
+                            <div class="notification-panel-item-content">
+                                <div class="notification-panel-item-image-container"
+                                    data-notification-panel-item-image-container>
+                                    <img class="notification-panel-item-image" src="" alt=""
+                                        data-notification-panel-item-image>
+                                </div>
+                                <div class="notification-panel-item-content-lower">
+                                    <div class="notification-panel-item-content-left"
+                                        data-notification-panel-item-icon-container>
+                                        <img src="" alt="" data-notification-panel-item-icon>
+                                    </div>
+                                    <div class="notification-panel-item-content-right">
+                                        <h1 data-notification-panel-item-title>Title</h1>
+                                        <h2 data-notification-panel-item-date>Date</h2>
+                                        <p data-notification-panel-item-description>Description</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </template>
+                    <a class="notifications-clear" onclick="clearNotifications()">
+                        <div class="notification-clear-content">
+                            <h1>Clear Notifications</h1>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="window hidden draggable" id="2bf035f2-41c7-44a9-8b12-c57b66f9ac12">
+        <div class="window-header" id="header">
+            <a class="window-header-centerbar 367740de-86bd-4d67-aeab-2b0a04086f26" id="window-header-centerbar"></a>
+            <div class="window-header-options" id="window-header-options">
+                <a class="window-header-option 012cea6f-cc40-4b50-96da-a89976d4e499" id="window-header-options-close">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path fill="none" d="M0 0h24v24H0V0z" />
+                        <path
+                            d="M18.3 5.71c-.39-.39-1.02-.39-1.41 0L12 10.59 7.11 5.7c-.39-.39-1.02-.39-1.41 0-.39.39-.39 1.02 0 1.41L10.59 12 5.7 16.89c-.39.39-.39 1.02 0 1.41.39.39 1.02.39 1.41 0L12 13.41l4.89 4.89c.39.39 1.02.39 1.41 0 .39-.39.39-1.02 0-1.41L13.41 12l4.89-4.89c.38-.38.38-1.02 0-1.4z" />
+                    </svg>
+                </a>
+                <a class="window-header-option">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path fill="none" d="M0 0h24v24H0V0z" />
+                        <path
+                            d="M6 14c-.55 0-1 .45-1 1v3c0 .55.45 1 1 1h3c.55 0 1-.45 1-1s-.45-1-1-1H7v-2c0-.55-.45-1-1-1zm0-4c.55 0 1-.45 1-1V7h2c.55 0 1-.45 1-1s-.45-1-1-1H6c-.55 0-1 .45-1 1v3c0 .55.45 1 1 1zm11 7h-2c-.55 0-1 .45-1 1s.45 1 1 1h3c.55 0 1-.45 1-1v-3c0-.55-.45-1-1-1s-1 .45-1 1v2zM14 6c0 .55.45 1 1 1h2v2c0 .55.45 1 1 1s1-.45 1-1V6c0-.55-.45-1-1-1h-3c-.55 0-1 .45-1 1z" />
+                    </svg>
+                </a>
+                <a class="window-header-option">
+
+                </a>
+                <a class="window-header-option 502c7757-fdb0-4d76-b4bc-0daef05995e8"
+                    id="window-header-options-minimize">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path fill="none" d="M24 0v24H0V0h24z" opacity=".87" />
+                        <path
+                            d="M8.12 19.3c.39.39 1.02.39 1.41 0L12 16.83l2.47 2.47c.39.39 1.02.39 1.41 0 .39-.39.39-1.02 0-1.41l-3.17-3.17c-.39-.39-1.02-.39-1.41 0l-3.17 3.17c-.4.38-.4 1.02-.01 1.41zm7.76-14.6c-.39-.39-1.02-.39-1.41 0L12 7.17 9.53 4.7c-.39-.39-1.02-.39-1.41 0-.39.39-.39 1.03 0 1.42l3.17 3.17c.39.39 1.02.39 1.41 0l3.17-3.17c.4-.39.4-1.03.01-1.42z" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+        <div class="window-content-pad">
+            <div class="window-content no-scroll">
+                <svg width="279.57" height="63.13" version="1.1" viewBox="0 0 73.969 16.703"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <g transform="translate(152.86 -16.644)">
+                        <path transform="matrix(.26458 0 0 .26458 -237.26 51.943)"
+                            d="m598.58-133.41c-23.635 0-60.166 1.4941-97.859 7.7383h3.6816v5.1602c2.0748-0.49488 4.1426-0.97991 6.1797-1.4375v-3.7228h10.002v1.5938c44.906-9.105 77.996-9.332 77.996-9.332zm-104.18 8.8301c-11.967 2.1492-23.978 4.7942-35.676 8.0391l-3.582 10.809c1.5854-0.58154 3.1697-1.1653 4.75-1.7226l-1.1406-2.1191 0.89063-0.68555 0.12109-0.0918c1e-3 -1e-3 2e-3 -3e-3 4e-3 -4e-3 0.40577-0.31141 0.83333-0.59814 1.2715-0.87109 0.0392-0.0244 0.0739-0.054 0.11328-0.0781 0.18122-0.11076 0.3779-0.20232 0.56446-0.30664 0.31197-0.17461 0.61862-0.3549 0.94531-0.51172 0.5182-0.24839 1.0552-0.47575 1.6094-0.67969 2e-3 -7e-4 4e-3 -1e-3 6e-3 -2e-3 0.024-9e-3 0.0502-0.0147 0.0742-0.0234 0.53184-0.19345 1.0772-0.37052 1.6406-0.52344 2e-3 0 3e-3 -2e-3 4e-3 -2e-3 2.3703-0.67 4.8216-1.0039 7.3379-1.0039 1.0607 0 2.0684 0.0714 3.0352 0.19727 0.50185 0.0632 0.96124 0.18256 1.4375 0.27929 0.36934 0.0763 0.76301 0.12083 1.1172 0.2168 5.2283-1.5702 10.396-3.0193 15.477-4.3496v-6.1562zm-46.934 11.396c-3.3439 1.0644-6.6587 2.1706-9.918 3.3457l3.2051 9.7109c0.907-0.3745 1.814-0.7707 2.7207-1.1367zm-18.842 6.7734c-0.12921 0.0524-0.25758 0.1055-0.38672 0.1582l-4.668 13.742c2.7998-1.3307 5.6039-2.6178 8.4121-3.8633zm-11.939 5.252c-0.8524 0.40803-1.69 0.82989-2.5312 1.248l1.0332 3.1641zm-11.568 6.0488c-3.1837 1.946-6.2674 3.6843-9.3008 5.3047l1.1484 1.0938-0.93164 1.0781c-1.9782 2.3012-4.4195 4.0731-7.2695 5.2773-2.853 1.2055-6.0153 1.7949-9.4355 1.7949-1.2241 0-2.4123-0.10212-3.5801-0.25781-17.619 6.3718-33.814 8.3533-52.068 10.51 32.111 0 55.955 1.3468 84.822-14.592z" />
+                        <path transform="matrix(.26458 0 0 .26458 -237.26 51.943)"
+                            d="m495.9-124.17v41.553h7v-41.553zm16.184 0v41.553h7v-7.8809l5.207-4.9258 10.361 12.807h8.5117l-13.654-17.373 12.479-12.531h-8.4004l-14.504 13.412v-25.061zm-132.7 1.793c-3.0239 0-5.8052 0.50374-8.3438 1.5117-2.5386 0.97064-4.7601 2.3699-6.6641 4.1992-1.904 1.792-3.3785 3.9208-4.4238 6.3848-1.0453 2.4639-1.5684 5.1525-1.5684 8.0645 0 2.9119 0.52304 5.5986 1.5684 8.0625 1.0453 2.4639 2.5006 4.6102 4.3672 6.4395 1.904 1.792 4.1255 3.1932 6.6641 4.2012 2.5759 0.97064 5.3571 1.4551 8.3438 1.4551 3.2479 0 6.197-0.55972 8.8476-1.6797 2.6506-1.12 4.8914-2.7431 6.7207-4.8711l-4.7031-4.4805c-1.4186 1.568-3.0051 2.7434-4.7598 3.5273-1.7546 0.74665-3.6596 1.1211-5.7129 1.1211-2.0533-1e-6 -3.939-0.33583-5.6562-1.0078-1.68-0.67198-3.1545-1.6255-4.4238-2.8574-1.232-1.232-2.2028-2.6872-2.9121-4.3672-0.67198-1.68-1.0078-3.527-1.0078-5.543 0-2.016 0.33584-3.865 1.0078-5.5449 0.70931-1.68 1.6801-3.1352 2.9121-4.3672 1.2693-1.232 2.7439-2.1835 4.4238-2.8555 1.7173-0.67198 3.603-1.0098 5.6562-1.0098 2.0533 0 3.9583 0.39376 5.7129 1.1777 1.7546 0.74665 3.3411 1.8854 4.7598 3.416l4.7031-4.4258c-1.8293-2.1653-4.0701-3.7884-6.7207-4.8711-2.6506-1.12-5.5804-1.6797-8.791-1.6797zm-59.582 0.56055 13.754 19.188-14.539 20.012h8.2888l10.51-14.92 10.658 14.92h8.3984l-14.723-20.275 13.715-18.924h-7.8945l-9.9023 13.92-10.033-13.92zm78.049 0 12.992 39.199h7.7832l9.8477-28.986 9.6953 28.986h7.7285l12.992-39.199h-6.9434l-10.039 29.973-9.8965-29.973h-6.7207l-10.127 29.818-9.752-29.818zm75.486 8.959c-2.3893 0-4.7034 0.31652-6.9434 0.95117-2.2026 0.59732-4.1076 1.5122-5.7129 2.7441l2.7441 5.0957c1.12-0.93331 2.4826-1.6609 4.0879-2.1836 1.6426-0.52265 3.3044-0.7832 4.9844-0.7832 2.5013 0 4.3676 0.57902 5.5996 1.7363 1.232 1.12 1.8476 2.7065 1.8476 4.7598v0.44727h-7.7266c-3.0239 0-5.452 0.3918-7.2812 1.1758-1.8293 0.78398-3.1533 1.8474-3.9746 3.1914-0.78397 1.344-1.1758 2.8571-1.1758 4.5371 0 1.7173 0.44778 3.2671 1.3438 4.6484 0.93332 1.344 2.24 2.4074 3.9199 3.1914 1.68 0.74665 3.639 1.1191 5.8789 1.1191 2.6506 0 4.8354-0.48444 6.5527-1.4551 1.2086-0.66857 2.1605-1.5239 2.8555-2.5645v3.6289h6.6074v-17.529c0-4.3306-1.1947-7.5209-3.584-9.5742-2.3519-2.0906-5.6929-3.1367-10.023-3.1367zm86.104 0c-2.9866 0-5.6559 0.65431-8.0078 1.9609-2.3146 1.3066-4.1443 3.117-5.4883 5.4316-1.3066 2.2773-1.959 4.9079-1.959 7.8945 0 2.9493 0.67166 5.5819 2.0156 7.8965 1.3813 2.3146 3.3036 4.1443 5.7676 5.4883 2.5013 1.3066 5.4138 1.959 8.7363 1.959 2.6133 0 4.9274-0.40916 6.9434-1.2305 2.0533-0.85864 3.7517-2.0727 5.0957-3.6406l-3.752-4.3125c-1.0453 1.12-2.24 1.9422-3.584 2.4648-1.344 0.52265-2.8552 0.7832-4.5352 0.7832-1.9413 0-3.659-0.37249-5.1524-1.1191-1.4933-0.74665-2.6494-1.8121-3.4707-3.1934-0.51753-0.87039-0.87108-1.822-1.0625-2.8555h23.461c0.0373-0.33599 0.0566-0.69113 0.0566-1.0645 0.0373-0.37332 0.0547-0.70915 0.0547-1.0078 0-3.1359-0.65235-5.8612-1.959-8.1758-1.3066-2.3146-3.0977-4.1057-5.375-5.375-2.2773-1.2693-4.8732-1.9043-7.7852-1.9043zm39.143 0c-2.8746 0-5.2814 0.52305-7.2226 1.5684-1.4186 0.77886-2.557 1.8268-3.416 3.1445v-4.377h-6.6641v29.904h7v-14.504c0-3.0613 0.7836-5.358 2.3516-6.8887 1.568-1.568 3.6775-2.3516 6.3281-2.3516 0.26132 0 0.52187 0.0193 0.7832 0.0566 0.26133 0 0.54119 0.0367 0.83984 0.11132zm-39.143 5.5996c1.68 0 3.1545 0.37445 4.4238 1.1211 1.3066 0.74664 2.3334 1.7734 3.0801 3.0801 0.52789 0.92379 0.86009 1.9491 0.9961 3.0781h-17.018c0.15323-1.1214 0.47359-2.1293 0.95898-3.0234 0.74665-1.344 1.7541-2.3881 3.0234-3.1348 1.3066-0.74665 2.8179-1.1211 4.5352-1.1211zm-86.719 11.816h7.2226v3.4707c-0.59731 1.5306-1.5855 2.6887-2.9668 3.4727-1.344 0.78398-2.8745 1.1758-4.5918 1.1758-1.792 0-3.1932-0.37249-4.2012-1.1191-1.008-0.74665-1.5117-1.7541-1.5117-3.0234 0-1.12 0.41113-2.0541 1.2324-2.8008 0.82132-0.78398 2.4271-1.1758 4.8164-1.1758z"
+                            stroke-width="2.3333" />
+                    </g>
+                </svg>
+                <h1>Project: Immersion</h1>
+                <h2>Example OS UI</h2>
+                <a href="https://xc-walker.webflow.io">xc-walker.webflow.io</a>
+                <p>A webpage showing what a highly customisable Operating System User Interface could look like. Aspects
+                    inspired by Microsoft Windows and Samsung Dex</p>
+            </div>
+        </div>
+    </div>
+    <div class="window hidden draggable" id="7474ba22-48d8-47df-8aea-6c4652e139ec">
+        <div class="window-header" id="header">
+            <a class="window-header-centerbar 367740de-86bd-4d67-aeab-2b0a04086f26" id="window-header-centerbar"></a>
+            <div class="window-header-options" id="window-header-options">
+                <a class="window-header-option 012cea6f-cc40-4b50-96da-a89976d4e499" id="window-header-options-close">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path fill="none" d="M0 0h24v24H0V0z" />
+                        <path
+                            d="M18.3 5.71c-.39-.39-1.02-.39-1.41 0L12 10.59 7.11 5.7c-.39-.39-1.02-.39-1.41 0-.39.39-.39 1.02 0 1.41L10.59 12 5.7 16.89c-.39.39-.39 1.02 0 1.41.39.39 1.02.39 1.41 0L12 13.41l4.89 4.89c.39.39 1.02.39 1.41 0 .39-.39.39-1.02 0-1.41L13.41 12l4.89-4.89c.38-.38.38-1.02 0-1.4z" />
+                    </svg>
+                </a>
+                <a class="window-header-option">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path fill="none" d="M0 0h24v24H0V0z" />
+                        <path
+                            d="M6 14c-.55 0-1 .45-1 1v3c0 .55.45 1 1 1h3c.55 0 1-.45 1-1s-.45-1-1-1H7v-2c0-.55-.45-1-1-1zm0-4c.55 0 1-.45 1-1V7h2c.55 0 1-.45 1-1s-.45-1-1-1H6c-.55 0-1 .45-1 1v3c0 .55.45 1 1 1zm11 7h-2c-.55 0-1 .45-1 1s.45 1 1 1h3c.55 0 1-.45 1-1v-3c0-.55-.45-1-1-1s-1 .45-1 1v2zM14 6c0 .55.45 1 1 1h2v2c0 .55.45 1 1 1s1-.45 1-1V6c0-.55-.45-1-1-1h-3c-.55 0-1 .45-1 1z" />
+                    </svg>
+                </a>
+                <a class="window-header-option">
+
+                </a>
+                <a class="window-header-option 502c7757-fdb0-4d76-b4bc-0daef05995e8"
+                    id="window-header-options-minimize">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path fill="none" d="M24 0v24H0V0h24z" opacity=".87" />
+                        <path
+                            d="M8.12 19.3c.39.39 1.02.39 1.41 0L12 16.83l2.47 2.47c.39.39 1.02.39 1.41 0 .39-.39.39-1.02 0-1.41l-3.17-3.17c-.39-.39-1.02-.39-1.41 0l-3.17 3.17c-.4.38-.4 1.02-.01 1.41zm7.76-14.6c-.39-.39-1.02-.39-1.41 0L12 7.17 9.53 4.7c-.39-.39-1.02-.39-1.41 0-.39.39-.39 1.03 0 1.42l3.17 3.17c.39.39 1.02.39 1.41 0l3.17-3.17c.4-.39.4-1.03.01-1.42z" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+        <div class="window-content-pad">
+            <div class="window-content no-scroll">
+                <h1 class="clock" id="7474ba22-48d8-47df-8aea-6c4652e139ec-time">00:00:00</h1>
+                <h1 class="clock" id="7474ba22-48d8-47df-8aea-6c4652e139ec-date">0000/00/00</h1>
+            </div>
+            <div class="window-hover-section upper">
+                <button onclick="copyTimeDate('JSON')">JSON</button>
+                <button onclick="copyTimeDate('UTC')">UTC</button>
+                <button onclick="copyTimeDate('TS')">Time String</button>
+                <button onclick="copyTimeDate('DS')">Date String</button>
+            </div>
+            <div class="window-hover-section lower">
+                <button onclick="copyTimeDate('S')">String</button>
+                <button onclick="copyTimeDate('LS')">Locale String</button>
+                <button onclick="copyTimeDate('LTS')">Locale Time String</button>
+                <button onclick="copyTimeDate('LDS')">Locale Date String</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
