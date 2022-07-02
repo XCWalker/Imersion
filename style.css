@@ -1,10 +1,10 @@
 /** Variables **/
 html {
     /* Taskbar */
-    --taskbar-height: 50px;
-    --taskbar-icon-margin: 4px;
-    --taskbar-radius: 8px;
-    --taskbar-gap: 8px;
+    --taskbar-height: var(--topbar-height);
+    --taskbar-icon-margin: calc(var(--topbar-gap) /2);
+    --taskbar-radius: var(--topbar-radius);
+    --taskbar-gap: var(--topbar-gap);
 
     /* Window */
     --window-header-height: 12px;
@@ -12,24 +12,6 @@ html {
     --window-radius: 8px;
     --window-gap: 8px;
     --window-fade-speed: 0.5s;
-
-    /* Notification */
-    --notification-popup-gap: 8px;
-    --notification-popup-radius: 8px;
-    --notification-popup-icon-size: 24px;
-
-    /* Radi */
-    --border-radius: 8px;
-
-    /* Gaps */
-    --gap: 8px;
-
-    /* Brand Colours */
-    --brand-color: #fec224;
-    --brand-text-color: #000;
-    --brand-color-alt: #fff;
-    --selector-color: #0060df;
-    --selector-text-color: #fff;
 }
 
 @media (prefers-color-scheme: light) {
