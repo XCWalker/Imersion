@@ -18,6 +18,7 @@ fetch("https://raw.githubusercontent.com/XCWalker/Default/main/app-switcher.json
 
             if (app.title == "Immersion") {
                 document.title = app.title + " | " + app.hoverTXT + " | XCWalker"
+                document.querySelector('meta[name="description"]').setAttribute("content", app.description);
             }
 
             return { app }
